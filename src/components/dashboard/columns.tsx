@@ -3,8 +3,19 @@
 import { ColumnDef } from "@tanstack/react-table";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
-import { Transaction } from "@/types/transaction";
-import SortIcon from "@/assets/sort.svg"; // SVG is now a React component ✅
+import Image from "next/image"; // ✅ use next/image
+import SortIcon from "@/assets/sort.svg"; // ✅ imported as static image
+
+export type Transaction = {
+  id: string;
+  gymName: string;
+  eventDate: string;
+  eventType: string;
+  trackingId: string;
+  amount: string;
+  paymentDate: string;
+  channel: "Card" | "Transfer";
+};
 
 export const columns: ColumnDef<Transaction>[] = [
   {
@@ -42,7 +53,13 @@ export const columns: ColumnDef<Transaction>[] = [
         className="px-0 text-sm font-medium text-[#2C2D33] hover:bg-transparent"
       >
         Gym Name
-        <SortIcon className="ml-2 w-4 h-4" /> {/* ✅ SVG as component */}
+        <Image
+          src={SortIcon}
+          alt="Sort"
+          width={16}
+          height={16}
+          className="ml-2"
+        />
       </Button>
     ),
     cell: ({ row }) => (
@@ -58,7 +75,13 @@ export const columns: ColumnDef<Transaction>[] = [
         className="px-0 text-sm font-medium text-[#2C2D33] hover:bg-transparent"
       >
         Event Date
-        <SortIcon className="ml-2 w-4 h-4" />
+        <Image
+          src={SortIcon}
+          alt="Sort"
+          width={16}
+          height={16}
+          className="ml-2"
+        />
       </Button>
     ),
     cell: ({ row }) => (
@@ -74,7 +97,13 @@ export const columns: ColumnDef<Transaction>[] = [
         className="px-0 text-sm font-medium text-[#2C2D33] hover:bg-transparent"
       >
         Event Type
-        <SortIcon className="ml-2 w-4 h-4" />
+        <Image
+          src={SortIcon}
+          alt="Sort"
+          width={16}
+          height={16}
+          className="ml-2"
+        />
       </Button>
     ),
     cell: ({ row }) => (
@@ -90,7 +119,13 @@ export const columns: ColumnDef<Transaction>[] = [
         className="px-0 text-sm font-medium text-[#2C2D33] hover:bg-transparent"
       >
         Tracking ID
-        <SortIcon className="ml-2 w-4 h-4" />
+        <Image
+          src={SortIcon}
+          alt="Sort"
+          width={16}
+          height={16}
+          className="ml-2"
+        />
       </Button>
     ),
     cell: ({ row }) => (
@@ -106,7 +141,13 @@ export const columns: ColumnDef<Transaction>[] = [
         className="px-0 text-sm font-medium text-[#2C2D33] hover:bg-transparent w-full justify-end"
       >
         Amount
-        <SortIcon className="ml-2 w-4 h-4" />
+        <Image
+          src={SortIcon}
+          alt="Sort"
+          width={16}
+          height={16}
+          className="ml-2"
+        />
       </Button>
     ),
     cell: ({ row }) => {
@@ -131,7 +172,13 @@ export const columns: ColumnDef<Transaction>[] = [
         className="px-0 text-sm font-medium text-[#2C2D33] hover:bg-transparent"
       >
         Payment Date
-        <SortIcon className="ml-2 w-4 h-4" />
+        <Image
+          src={SortIcon}
+          alt="Sort"
+          width={16}
+          height={16}
+          className="ml-2"
+        />
       </Button>
     ),
     cell: ({ row }) => (
@@ -149,7 +196,13 @@ export const columns: ColumnDef<Transaction>[] = [
         className="px-0 text-sm font-medium text-[#2C2D33] hover:bg-transparent"
       >
         Channel
-        <SortIcon className="ml-2 w-4 h-4" />
+        <Image
+          src={SortIcon}
+          alt="Sort"
+          width={16}
+          height={16}
+          className="ml-2"
+        />
       </Button>
     ),
     cell: ({ row }) => {
