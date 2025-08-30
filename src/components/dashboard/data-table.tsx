@@ -184,8 +184,6 @@ export function DataTable() {
                 ?.setFilterValue(
                   filters.gym === "all" ? undefined : filters.gym
                 );
-
-              // You can also store amounts and eventTypes and apply custom filtering logic with table.setColumnFilters(...)
             }}
           />
           <DateFilter />
