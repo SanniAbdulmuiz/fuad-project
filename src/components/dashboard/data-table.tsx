@@ -179,7 +179,6 @@ export function DataTable() {
                   filters.channel === "all" ? undefined : filters.channel
                 );
 
-              // Example: filter gymName column
               table
                 .getColumn("gymName")
                 ?.setFilterValue(
