@@ -173,7 +173,6 @@ export function DataTable() {
 
           <FilterModal
             onApply={(filters) => {
-              // Example: set column filter for channel
               table
                 .getColumn("channel")
                 ?.setFilterValue(
