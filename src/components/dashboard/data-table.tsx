@@ -190,7 +190,6 @@ export function DataTable() {
         </div>
       </div>
 
-      {/* Table */}
       <div className="rounded-md border bg-white">
         <Table>
           <TableHeader className="border-b">
