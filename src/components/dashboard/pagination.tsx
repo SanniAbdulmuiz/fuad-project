@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/select";
 
 interface PaginationProps {
-  table: any; // Replace with correct TanStack Table type if needed
+  table: any;
 }
 
 export default function Pagination({ table }: PaginationProps) {
